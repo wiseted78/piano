@@ -1,0 +1,13 @@
+import {strict as assert} from "node:assert";
+import {judge,multiplier,accuracy} from "../game.js";
+assert.equal(judge(0).kind,"Perfect");
+assert.equal(judge(90).points,100);
+assert.equal(judge(180).points,80);
+assert.equal(judge(280).points,50);
+assert.equal(judge(281),null);
+assert.equal(multiplier(0),1);
+assert.equal(multiplier(9),1);
+assert.equal(multiplier(10),2);
+assert.equal(multiplier(70),8);
+assert.equal(accuracy(9,1,0),90);
+console.log("All game-rule tests passed.");
